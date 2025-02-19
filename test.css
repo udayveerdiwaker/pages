@@ -1,0 +1,75 @@
+/* General styles for the FAQ section */
+.faq-section {
+  background-color: #f9f9f9;
+  padding: 60px 0;
+
+}
+
+.faq-section h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #28a745;
+}
+
+.faq-section .greentext {
+  color: #28a745;
+  /* Green color */
+}
+
+.faq-section .accordion-button {
+  font-size: 1.125rem;
+  font-weight: 600;
+  background-color: #fff;
+  color: #28a745;
+  border: 1px solid #ddd;
+  padding: 15px;
+  transition: all 0.3s ease;
+  border-radius: 50px;
+}
+
+.faq-section .accordion-button:not(.collapsed) {
+  background-color: #0E3E53;
+  color: #28a745;
+}
+
+.faq-section .accordion-button:focus {
+  box-shadow: none;
+}
+
+.faq-section .accordion-button h5 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.faq-section .accordion-body {
+  font-size: 1rem;
+  color: #555;
+  padding: 20px;
+  background-color: #fafafa;
+}
+
+/* Add some spacing between accordion items */
+.faq-section .accordion-item {
+  margin: 1rem 0;
+}
+
+/* Light green background for the FAQ section */
+.bg_section {
+  background-color: #f1f8f6;
+}
+
+/* .more-text {
+  display: none;
+}
+
+#toggle:checked~.more-text {
+  display: inline;
+}
+
+#toggle {
+  display: none;
+} */
+
+#more {
+  display: none;
+}

@@ -1,0 +1,318 @@
+body {
+    /* font-family: 'Times New Roman', Times, serif;d */
+    background-color: #afabad;
+    margin: 0;
+    padding: 0;
+    /* font-family: "Alatsi", serif; */
+}
+
+section {
+    padding: 20px 40px;
+}
+
+
+
+/* Flexbox Layout for the Section */
+
+
+
+/* Sidebar Styling */
+aside {
+    position: sticky;
+    top: 0;
+    width: 200px;
+    height: 90vh;
+    overflow-y: auto;
+    flex: 1 1 25%;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    border: 1px solid #6d7184;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 12;
+    font-family: inter;
+    background-color: #f4f8fa;
+    /* Info color */
+    color: #183558;
+    background: #eaeff4;
+    font-size: 1.2rem;
+    height: 12vh;
+    width: 100%;
+
+}
+
+header a {
+    color: #6d7184;
+    font-size: 15px;
+}
+
+
+/* General Alert Styling */
+.alert {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ul-reset {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+label {
+    display: block;
+    margin: 5px;
+}
+
+
+.accordion-item {
+    margin-bottom: 5px;
+    /* border: none !important; */
+    /* border-bottom: 1px solid #6d7184 !important; */
+    /* border: 1px solid #6d7184 !important; */
+}
+
+.accordion-button {
+    font-size: 1rem !important;
+    font-weight: 500;
+    color: #183558 !important;
+    background-color: #f8f9fa !important;
+    box-shadow: none !important;
+}
+
+.accordion-button:focus {
+    /* box-shadow: 0px 0px 2px #555 !important; */
+    border: none !important;
+}
+
+.accordion-body {
+    font-size: 0.9rem;
+    color: #183558;
+    background-color: #f8f9fa;
+    padding: 10px;
+}
+
+.cards .car_name {
+    color: #9a2682;
+}
+
+.cards .card_price {
+    color: #183558;
+}
+
+.cards .card-text {
+    color: #183558;
+}
+
+.cards .card-footer {
+    color: #2f9e44;
+}
+
+
+/* Global Styles */
+body {
+    font-family: 'Alatsi', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Section Wrapper */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Card Styling */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background-color: #fff;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Image */
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Card Text */
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+.card_price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #28a745;
+}
+
+.card-footer {
+    text-align: center;
+    font-weight: bold;
+    color: #2f9e44;
+    background-color: transparent;
+}
+
+/* Responsive Layout */
+@media (max-width: 992px) {
+    .row-cols-sm-2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    .row-cols-sm-2 {
+        grid-template-columns: 1fr;
+        /* Stack cards on smaller screens */
+    }
+}
+
+
+.card_price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #28a745;
+}
+
+.card-footer {
+    /* text-align: center; */
+    font-weight: bold;
+    color: #2f9e44;
+}
+
+
+
+
+/* Mobile - Stacked Layout */
+@media (max-width: 767px) {
+    .section {
+        flex-direction: column;
+        /* Stack the content */
+        gap: 15px;
+    }
+
+    aside {
+        order: 2;
+        /* Move aside below content */
+        width: 100%;
+        /* Full width */
+    }
+
+    .col-3,
+    .col-md-3 {
+        width: 100%;
+        /* Make columns full-width */
+        margin-bottom: 15px;
+    }
+
+    .col-9,
+    .col-md-9 {
+        width: 100%;
+        /* Make content full-width */
+    }
+
+    .card {
+        flex-direction: column;
+        /* Stack card items */
+        width: 100%;
+    }
+
+    .card img {
+        width: 100%;
+        /* Image takes full width */
+        height: auto;
+    }
+
+    .card-img-top {
+        height: 180px;
+        /* Slightly smaller image on smaller screens */
+    }
+
+    .card-title {
+        font-size: 1rem;
+        /* Smaller font size for titles on mobile */
+    }
+
+    .card_price {
+        font-size: 1.25rem;
+        /* Smaller price text for mobile */
+    }
+}
+
+/* Tablet - Adjust Columns */
+@media (min-width: 768px) and (max-width: 991px) {
+    .section {
+        flex-direction: row;
+    }
+
+    aside {
+        width: 30%;
+        /* Sidebar takes 30% of the width */
+    }
+
+    .col-3,
+    .col-md-3 {
+        width: 30%;
+        /* Sidebar width */
+    }
+
+    .col-9,
+    .col-md-9 {
+        width: 70%;
+        /* Content area width */
+    }
+
+    .card {
+        width: 100%;
+        /* Ensure cards are responsive */
+    }
+
+    .card img {
+        width: 100%;
+        /* Image takes full width */
+    }
+
+    .card {
+        padding: 1rem;
+        /* More padding for larger screens */
+    }
+
+    .card-img-top {
+        height: 220px;
+        /* Larger images on desktops */
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+        /* Larger font size on large screens */
+    }
+}

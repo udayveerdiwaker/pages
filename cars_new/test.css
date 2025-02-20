@@ -1,0 +1,342 @@
+body {
+    /* font-family: 'Times New Roman', Times, serif;d */
+    background-color: #afabad;
+    margin: 0;
+    padding: 0;
+    font-family: "Alatsi", serif;
+}
+
+section {
+    padding: 20px 40px;
+}
+
+/* Container Styling */
+.container {
+    width: 100%;
+    padding: 0 15px;
+    margin: 10px auto;
+}
+
+/* Flexbox Layout for the Section */
+
+
+
+/* Sidebar Styling */
+aside {
+    position: sticky;
+    top: 0;
+    width: 200px;
+    height: 90vh;
+    overflow-y: auto;
+    flex: 1 1 25%;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    border: 1px solid #6d7184;
+}
+
+.header {
+    font-family: inter;
+    background-color: #f4f8fa;
+    /* Info color */
+    color: #183558;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.header a {
+    color: #6d7184;
+    text-decoration: none;
+}
+
+
+/* General Alert Styling */
+.alert {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.accordion-item {
+    margin-bottom: 5px;
+    /* border: none !important; */
+    border-bottom: 1px solid #6d7184 !important;
+    /* border: 1px solid #6d7184 !important; */
+}
+
+.accordion-button {
+    font-size: 1rem !important;
+    font-weight: 500;
+    color: #183558 !important;
+    background-color: #f8f9fa !important;
+    box-shadow: none !important;
+}
+
+.accordion-button:focus {
+    /* box-shadow: 0px 0px 2px #555 !important; */
+    border: none !important;
+}
+
+.accordion-body {
+    font-size: 0.9rem;
+    color: #183558;
+    background-color: #f8f9fa;
+    padding: 10px;
+}
+
+.cards .car_name {
+    color: #9a2682;
+}
+
+.cards .card_price {
+    color: #183558;
+}
+
+.cards .card-text {
+    color: #183558;
+}
+
+.cards .card-footer {
+    color: #2f9e44;
+}
+
+
+
+/* Image inside the card */
+.card-img-top {
+    width: 100%;
+    /* Ensure the image stretches across the card */
+    height: 200px;
+    /* Fixed height to keep images uniform */
+    object-fit: cover;
+    /* Ensures the image covers the area without distortion */
+    border-bottom: 1px solid #ddd;
+    /* Border separating image from card body */
+}
+
+/* Card Title */
+.card-title {
+    font-size: 1.25rem;
+    /* Slightly larger text for the title */
+    font-weight: bold;
+    color: #333;
+    /* Dark gray text */
+    margin-bottom: 0.5rem;
+    /* Space between title and text */
+}
+
+/* Card Price */
+.card_price {
+    font-size: 1.5rem;
+    color: #28a745;
+    /* Green color for the price */
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+
+/* Responsive Design */
+@media (max-width: 767px) {
+    .card-img-top {
+        height: 180px;
+        /* Slightly smaller image on smaller screens */
+    }
+
+    .card-title {
+        font-size: 1rem;
+        /* Smaller font size for titles on mobile */
+    }
+
+    .card_price {
+        font-size: 1.25rem;
+        /* Smaller price text for mobile */
+    }
+}
+
+/* Large Screens (desktop) */
+@media (min-width: 992px) {
+    .card {
+        padding: 1rem;
+        /* More padding for larger screens */
+    }
+
+    .card-img-top {
+        height: 220px;
+        /* Larger images on desktops */
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+        /* Larger font size on large screens */
+    }
+}
+
+/* Bootstrap Grid Specific */
+
+.ul-reset {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+label {
+    display: block;
+    margin: 5px;
+}
+
+.accordion-button {
+    font-family: "Alatsi", serif;
+    letter-spacing: 0.1px;
+}
+
+/* Card Layout */
+.card {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-right: 1px solid #ddd;
+}
+
+/* Card Content */
+.card-body {
+    padding: 15px;
+    width: 100%;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Mobile - Stacked Layout */
+@media (max-width: 767px) {
+    .section {
+        flex-direction: column;
+        /* Stack the content */
+        gap: 15px;
+    }
+
+    aside {
+        order: 2;
+        /* Move aside below content */
+        width: 100%;
+        /* Full width */
+    }
+
+    .col-3,
+    .col-md-3 {
+        width: 100%;
+        /* Make columns full-width */
+        margin-bottom: 15px;
+    }
+
+    .col-9,
+    .col-md-9 {
+        width: 100%;
+        /* Make content full-width */
+    }
+
+    .card {
+        flex-direction: column;
+        /* Stack card items */
+        width: 100%;
+    }
+
+    .card img {
+        width: 100%;
+        /* Image takes full width */
+        height: auto;
+    }
+}
+
+/* Tablet - Adjust Columns */
+@media (min-width: 768px) and (max-width: 991px) {
+    .section {
+        flex-direction: row;
+    }
+
+    aside {
+        width: 30%;
+        /* Sidebar takes 30% of the width */
+    }
+
+    .col-3,
+    .col-md-3 {
+        width: 30%;
+        /* Sidebar width */
+    }
+
+    .col-9,
+    .col-md-9 {
+        width: 70%;
+        /* Content area width */
+    }
+
+    .card {
+        width: 100%;
+        /* Ensure cards are responsive */
+    }
+
+    .card img {
+        width: 100%;
+        /* Image takes full width */
+    }
+}
+
+/* Desktop - Side by Side Layout */
+@media (min-width: 992px) {
+    .section {
+        flex-direction: row;
+    }
+
+    aside {
+        width: 25%;
+        /* Sidebar takes 25% of the width */
+    }
+
+    .col-3,
+    .col-md-3 {
+        width: 25%;
+        /* Sidebar width */
+    }
+
+    .col-9,
+    .col-md-9 {
+        width: 75%;
+        /* Content area width */
+    }
+
+    .card {
+        flex-direction: row;
+        max-width: 100%;
+    }
+
+    .card img {
+        width: auto;
+        /* Image takes its natural width */
+        height: 100%;
+    }
+}
